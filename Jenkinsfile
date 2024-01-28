@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
   //adding a comment for the commit test
-  DEPLOY_CREDS = credentials('mulesoft-releases')
+  DEPLOY_CREDS = credentials('101101')
   MULE_VERSION = '4.4.0'
   BG = "dellc"
   WORKER = "Micro"
