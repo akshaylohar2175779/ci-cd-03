@@ -22,7 +22,7 @@ pipeline {
   APP_NAME = 'ci-cd-03-pipe'
   }
   steps {
-  bat 'mvn -U -V -e -B -gs %M2SETTINGS% -DskipTests deploy -Danypoint.username="al0159330" -Danypoint.password="Akshay@123"'
+  bat 'mvn -U -V -e -B -DskipTests deploy -Danypoint.username="al0159330" -Danypoint.password="Akshay@123"'
   }
   }
   }
