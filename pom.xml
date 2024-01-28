@@ -44,8 +44,10 @@
 						
 						<applicationName>${project.artifactId}</applicationName>
 						
-						<workers>1</workers> 
+						
 						<objectStoreV2>true</objectStoreV2>
+						<workerType>MICRO</workerType> 
+                                                <workers>1</workers> 
 						
 					</cloudhub2Deployment>
 				</configuration>
