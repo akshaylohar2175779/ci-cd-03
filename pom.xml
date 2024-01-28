@@ -60,6 +60,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+        <repository>
+            <id>mulesoft-releases</id>
+            <url>https://repository.mulesoft.org/releases/</url>
+        </repository>
+        <!-- Optionally, you can also configure a snapshot repository -->
+        <snapshotRepository>
+            <id>mulesoft-snapshots</id>
+            <url>https://repository.mulesoft.org/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 	<dependencies>
 		<dependency>
