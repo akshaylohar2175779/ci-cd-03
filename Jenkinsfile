@@ -25,5 +25,5 @@ pipeline {
   bat 'mvn -U -V -e -B -gs %M2SETTINGS% -DskipTests deploy'
   }
   }
-  
+  }
   }
