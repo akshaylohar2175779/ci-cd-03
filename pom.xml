@@ -32,23 +32,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<classifier>mule-application-</classifier>
+					
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						
 						<environment>Sandbox</environment>
-						
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${anypoint.user}</username>
 						<password>${anypoint.password}</password>
-						
 						<applicationName>${project.artifactId}</applicationName>
-						
-						
-						<objectStoreV2>true</objectStoreV2>
+					        <objectStoreV2>true</objectStoreV2>
 						<workerType>MICRO</workerType> 
                                                 <workers>1</workers> 
-						
 					</cloudhub2Deployment>
 				</configuration>
 			
