@@ -40,8 +40,7 @@
 						<username>${anypoint.user}</username>
 						<password>${anypoint.password}</password>
 						<applicationName>${project.artifactId}</applicationName>
-					        <objectStoreV2>true</objectStoreV2>
-						<workerType>MICRO</workerType> 
+					        <workerType>MICRO</workerType> 
                                                 <workers>1</workers> 
 					</cloudhub2Deployment>
 				</configuration>
