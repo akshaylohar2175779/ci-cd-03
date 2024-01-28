@@ -35,25 +35,18 @@
 					<classifier>mule-application-</classifier>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<provider>MC</provider>
-						<environment>${cloudhub.environment}</environment>
-						<target>Cloudhub-US-West-1</target>
+						
+						<environment>Sandbox</environment>
+						
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${anypoint.user}</username>
 						<password>${anypoint.password}</password>
-						<businessGroup>${cloudhub.bg}</businessGroup>
-						<applicationName>${cloudhub.app}</applicationName>
-						<replicas>1</replicas>
-						<vCores>1</vCores>
-						<deploymentSettings>
-							<http>
-								<inbound>
-									<publicUrl>${cloudhub.app}.cloudhub.io</publicUrl>
-									<forwardSslSession>true</forwardSslSession>
-									<lastMileSecurity>true</lastMileSecurity>
-								</inbound>
-							</http>
-						</deploymentSettings>
+						
+						<applicationName>${project.artifactId}</applicationName>
+						
+						<workers>1</workers> 
+						<objectStoreV2>true</objectStoreV2>
+						
 					</cloudhub2Deployment>
 				</configuration>
 			
