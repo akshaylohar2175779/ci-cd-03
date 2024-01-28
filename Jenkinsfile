@@ -1,29 +1,23 @@
-pipeline {
-  agent any
-  environment {
-  //adding a comment for the commit test
-  DEPLOY_CREDS = credentials('mulesoft-releases')
-  MULE_VERSION = '4.4.0'
-  BG = "dellc"
-  WORKER = "Micro"
-  M2SETTINGS = "C:\\Users\\aksha\\.m2\\settings.xml"
-  }
-  stages {
-  stage('Build') {
-  steps {
-  bat 'mvn -B -U -e -V clean -gs %M2SETTINGS% -DskipTests package'
-  }
-  }
- 
-  
-  stage('Deploy Sandbox') {
-  environment {
-  ENVIRONMENT = 'Sandbox'
-  APP_NAME = 'ci-cd-03-pipe'
-  }
-  steps {
-  bat 'mvn -U -V -e -B -DskipTests deploy -Danypoint.username="al0159330" -Danypoint.password="Akshay@123"'
-  }
-  }
-  }
-  }
+pipeline{  
+agent any 
+stages{ 
+stage('Build Application') { 
+steps { 
+bat 'mvn clean install' 
+} 
+} 
+stage('Deploy CloudHubs') { 
+environment { 
+ANYPOINT_CREDENTIALS = credentials('al0159330') 
+} 
+steps { 
+echo 'Deploying mule project due to the latest code commit…' 
+echo 'Deploying to the configured environment….' 
+bat 'mvn clean deploy -DmuleDeploy  
+-Dusername=al0159330 -
+Dpassword=Akshay@123 
+-DworkerType=Micro -Dworkers=1' 
+}  
+} 
+} 
+} 
