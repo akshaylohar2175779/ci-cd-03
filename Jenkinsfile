@@ -22,7 +22,7 @@ pipeline {
   APP_NAME = 'ci-cd-03-pipe'
   }
   steps {
-  bat 'mvn -U -V -e -B -gs %M2SETTINGS% -DskipTests deploy -DaltDeploymentRepository=mulesoft-releases-v1::default::https://repository.mulesoft.org/releases/'
+  bat 'mvn -U -V -e -B -gs %M2SETTINGS% -DskipTests deploy -DaltDeploymentRepository=mulesoft-releases::default::https://repository.mulesoft.org/releases/'
   }
   }
   }
